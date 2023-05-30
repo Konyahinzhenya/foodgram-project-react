@@ -9,7 +9,7 @@ services:
       - ./.env
   
   backend:
-      image: konyahinzhenya/foodgram_backend:latest
+      # image: konyahinzhenya/foodgram_backend:latest
       build:
         context: ../backend
         dockerfile: Dockerfile
@@ -41,7 +41,6 @@ services:
       - media_value:/var/html/media/
     depends_on:
       - frontend
-      - backend
     restart: always
 
 volumes:

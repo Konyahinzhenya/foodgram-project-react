@@ -12,7 +12,7 @@ services:
     restart: always
 
   backend:
-    image: konyahinzhenya/foodgram_backend:latest
+    image: konyahinzhenya/foodgram-backend:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -23,7 +23,7 @@ services:
       - ./.env
 
   frontend:
-    image: konyahinzhenya/foodgram_frontend:latest
+    image: konyahinzhenya/foodgram-frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
 

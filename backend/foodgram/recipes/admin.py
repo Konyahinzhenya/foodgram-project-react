@@ -21,7 +21,7 @@ class TagAdmin(admin.ModelAdmin):
 class RecipeAdmin(admin.ModelAdmin):
     list_display = (
         'pk', 'name', 'author', 'in_favorites',
-        'cooking_time', 'text' , 'image'
+        'cooking_time', 'text', 'image'
     )
     list_editable = (
         'name', 'cooking_time', 'text',
@@ -36,7 +36,7 @@ class RecipeAdmin(admin.ModelAdmin):
         return obj.favorite_recipe.count()
 
 
-@admin.register(models.Recipe_ingredient)
+@admin.register(models.RecipeIngredient)
 class RecipeIngredientAdmin(admin.ModelAdmin):
     list_display = ('pk', 'recipe', 'ingredient', 'amount')
     list_editable = ('recipe', 'ingredient', 'amount')
